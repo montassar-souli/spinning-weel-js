@@ -2,7 +2,6 @@
 const spinWheel = document.getElementById("spinWheel");
 const spinBtn = document.getElementById("spin_btn");
 const text = document.getElementById("text");
-
 /* --------------- Minimum And Maximum Angle For A value  --------------------- */
 const spinValues = [
   {
@@ -72,19 +71,22 @@ const spinValues = [
     minDegree: 151,
     maxDegree: 180,
     value: 10,
-    question: "Vide",
+    question:
+      "Quelle est l'importance des couleurs dans la publicité en ligne, et comment influencent-elles le comportement des consommateurs dans un environnement numérique ?",
   },
   {
     minDegree: 121,
     maxDegree: 150,
     value: 11,
-    question: "Vide",
+    question:
+      "Comment la couleur grise est-elle employée dans la publicité pour exprimer la neutralité, la modernité ou la sophistication ?",
   },
   {
     minDegree: 91,
     maxDegree: 120,
     value: 12,
-    question: "Vide",
+    question:
+      "Comment les couleurs influencent-elles la perception de la qualité et du prix d'un produit dans la publicité ?",
   },
 ];
 
@@ -153,7 +155,7 @@ let count = 0;
 let resultValue = 101;
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
-  text.innerHTML = `<p>Best Of Luck!</p>`;
+  text.innerHTML = `<p>Bonne chance!</p>`;
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   let rotationInterval = window.setInterval(() => {
     spinChart.options.rotation = spinChart.options.rotation + resultValue;
